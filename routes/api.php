@@ -38,3 +38,6 @@ Route::group([
 });
 
     Route::get('roles', [GeneralController::class,'roles']);
+    Route::get('etapas', [GeneralController::class,'etapas']);
+    Route::get('categorias', [GeneralController::class,'categorias']);
+    Route::get('prototipos', [GeneralController::class,'prototipos']);

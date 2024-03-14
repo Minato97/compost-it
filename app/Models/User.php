@@ -29,6 +29,12 @@ class User extends Authenticatable implements JWTSubject
     public function roles(){
         return $this->belongsTo(Rol::class,'id_roles');
     }
+    public function estatus(){
+        return $this->belongsTo(Estatus::class,'id_estatus');
+    }
+    public function publicaciones(){
+        return $this->hasMany(Publicacion::class,'id_users');
+    }
 
     /**
      * The attributes that should be hidden for serialization.

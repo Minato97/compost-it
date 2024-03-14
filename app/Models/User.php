@@ -18,9 +18,17 @@ class User extends Authenticatable implements JWTSubject
      * @var array<int, string>
      */
     protected $fillable = [
-        'username',
+        'id',
+        'nombres',
+        'apellido_paterno',
+        'apellido_materno',
+        'email',
         'password',
+        'id_roles'
     ];
+    public function roles(){
+        return $this->belongsTo(Rol::class,'id_roles');
+    }
 
     /**
      * The attributes that should be hidden for serialization.

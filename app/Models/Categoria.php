@@ -14,7 +14,8 @@ class Categoria extends Model
         'categoria',
         'descripcion',
         'instrucciones',
-        'recursos'
+        'recursos',
+        'utilizacion_final'
     ];
     public function compostas(){
         return $this->hasMany(Composta::class, 'id_categorias');

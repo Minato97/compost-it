@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('descripcion');
             $table->text('instruccines');
             $table->text('recursos');
+            $table->string('utilizacion_final');
         });
     }
 

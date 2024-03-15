@@ -78,12 +78,7 @@ class UserController extends Controller
     public function ingresar(Request $request)
     {
         $user = User::where('email', $request->email)->first();
-        if($user){
-            return response()->json(['error' => 'Usuario encontrado']);
-        } else {
-
-        return response()->json(['error' => 'Usuario no encontrado']);
-        }
+        return response()->json(['error' => 'Usuario encontrado']);
 
 //        if (!$user) {
 //            return response()->json(['error' => 'Usuario no encontrado']);

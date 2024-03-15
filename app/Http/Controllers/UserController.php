@@ -66,7 +66,7 @@ class UserController extends Controller
                 'apellido_materno' => $request->apellido_materno,
                 'id_estatus' => 1,
                 'id_roles' => 1
-    ]
+            ]
         ));
 
         return response()->json([
@@ -75,25 +75,27 @@ class UserController extends Controller
         ]);
     }
 
-    public function ingresar(Request $request) {
+    public function ingresar(Request $request)
+    {
         $user = User::where('email', $request->email)->first();
+        return response()->json(['error' => 'Usuario encontrado']);
 
-        if (!$user) {
-            return response()->json(['error' => 'Usuario no encontrado']);
-//            return false;
-        }
-
-        // Verificar si la contraseña proporcionada coincide con la almacenada
+//        if (!$user) {
+//            return response()->json(['error' => 'Usuario no encontrado']);
+////            return false;
+//        }
+//
+//        // Verificar si la contraseña proporcionada coincide con la almacenada
 //        if (password_verify($request->password, $user->password)) {
-            // La contraseña es correcta, puedes retornar los datos del usuario
+//            // La contraseña es correcta, puedes retornar los datos del usuario
 //            return response()->json(['error' => 'Usuario encontrado']);
-//            return $user;
-//            return true;
-        else {
-            // La contraseña es incorrecta
-            return response()->json(['error' => 'Contraseña incorrecta']);
-//            return false;
-        }
+////            return $user;
+////            return true;
+//        } else {
+//            // La contraseña es incorrecta
+//            return response()->json(['error' => 'Contraseña incorrecta']);
+////            return false;
+//        }
     }
 
 

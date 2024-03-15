@@ -84,12 +84,12 @@ class UserController extends Controller
         }
 
         // Verificar si la contraseña proporcionada coincide con la almacenada
-        if (password_verify($request->password, $user->password)) {
+//        if (password_verify($request->password, $user->password)) {
             // La contraseña es correcta, puedes retornar los datos del usuario
-            return response()->json(['error' => 'Usuario encontrado']);
+//            return response()->json(['error' => 'Usuario encontrado']);
 //            return $user;
 //            return true;
-        } else {
+        else {
             // La contraseña es incorrecta
             return response()->json(['error' => 'Contraseña incorrecta']);
 //            return false;

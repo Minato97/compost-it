@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CompostaController;
 use App\Http\Controllers\GeneralController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -41,3 +42,14 @@ Route::group([
     Route::get('etapas', [GeneralController::class,'etapas']);
     Route::get('categorias', [GeneralController::class,'categorias']);
     Route::get('prototipos', [GeneralController::class,'prototipos']);
+    Route::get('estatus', [GeneralController::class,'estatus']);
+
+
+    //Apis composta
+    Route::post('compostas', [CompostaController::class, 'index']);
+
+
+    //Apis Users
+Route::post('registrar', [\App\Http\Controllers\UserController::class, 'register']);
+Route::post('ingresar', [\App\Http\Controllers\UserController::class, 'ingresar']);
+

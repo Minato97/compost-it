@@ -20,7 +20,17 @@ class UserSeeder extends Seeder
                 'apellido_materno' => 'Gonzalez',
                 'email' => 'ejemplo@gmail.com',
                 'password' => bcrypt('123456'),
-                'id_roles' => 1
+                'id_roles' => 1,
+                'id_estatus' => 1
+            ],
+            [
+                'nombres' => 'María',
+                'apellido_paterno' => 'Lopez',
+                'apellido_materno' => 'Davalos',
+                'email' => 'ejemplo2@gmail.com',
+                'password' => bcrypt('123456'),
+                'id_roles' => 1,
+                'id_estatus' => 1
             ],
 
         ];

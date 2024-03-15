@@ -23,6 +23,11 @@ return new class extends Migration
                 ->constrained('roles')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
+            $table->foreignId('id_estatus')
+                ->nullable()
+                ->constrained('estatus')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
             $table->timestamps();
         });
     }

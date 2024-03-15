@@ -12,6 +12,7 @@ class Composta extends Model
     protected $table = 'compostas';
     protected $fillable = [
         'id',
+        'nombre',
         'CN',
         'humedad',
         'oxigeno',

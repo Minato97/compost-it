@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Composta;
 use Illuminate\Http\Request;
 
 class CompostaController extends Controller
@@ -9,9 +10,11 @@ class CompostaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index( Request $request)
     {
-        //
+        $data = Composta::with('users','prototipos','etapas','categorias')->where('id_users',$request->id)->get();
+//        dd($request->id);
+        return $data;
     }
 
     /**

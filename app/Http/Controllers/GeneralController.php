@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categoria;
+use App\Models\Estatus;
 use App\Models\Etapa;
 use App\Models\Prototipo;
 use App\Models\Rol;
@@ -31,6 +32,12 @@ class GeneralController extends Controller
     public function prototipos()
     {
         $data = Prototipo::all();
+        return $data;
+    }
+
+    public function estatus()
+    {
+        $data = Estatus::all();
         return $data;
     }
 

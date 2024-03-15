@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('categoria');
             $table->text('descripcion');
-            $table->text('instruccines');
-            $table->text('recursos');
+            $table->text('instrucciones');
+            $table->text('recursos')->nullable();
             $table->string('utilizacion_final');
         });
     }

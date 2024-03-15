@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('prototipo');
             $table->text('descripcion');
             $table->text('instrucciones');
-            $table->text('recursos');
+            $table->text('recursos')->nullable();
         });
     }
 

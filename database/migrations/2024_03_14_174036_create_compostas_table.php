@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('compostas', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
             $table->decimal('CN')->nullable();
             $table->decimal('humedad')->nullable();
             $table->decimal('oxigeno')->nullable();
